@@ -5,7 +5,7 @@ pipeline {
         stage('Run TestNG Tests') {
             steps {
                 // TestNG testlerini çalıştırma adımı
-                sh 'mvn clean test'
+                bat 'mvn clean test'
             }
         }
         stage('Process TestNG Reports and Jira Integration') {
