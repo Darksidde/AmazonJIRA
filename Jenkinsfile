@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+     tools {
+        // Jenkins arayüzünden tanımlı olan Maven'ın adını kullanarak tanımlama yapın
+        maven 'Maven' // Bu kısımı kendi Maven yüklemenize göre değiştirmelisiniz
+    }
+
     stages {
         stage('Run TestNG Tests') {
             steps {
